@@ -9,7 +9,7 @@ interface DataProps {
 };
 
 const fetchSuperHeroes = () => {
-    return axios.get('http://localhost:4000/superheros');
+    return axios.get('http://localhost:4000/super2heros');
 }
 export const RQSuperHerosPage = () => {
 
@@ -17,10 +17,14 @@ export const RQSuperHerosPage = () => {
     //     return axios.get('http://localhost:4000/superheros')
     // });
     
-    const { isLoading, data } = useQuery('super-heroes', fetchSuperHeroes);
+    const { isLoading, data, isError, error } = useQuery('super-heroes', fetchSuperHeroes);
     
     if(isLoading){
         return <h2>Loading ..... </h2>
+    }
+
+    if(isError){
+        console.log("에러 :"+error);
     }
 
     return(

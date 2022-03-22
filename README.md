@@ -11,3 +11,6 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 3) 이제 query로 db에서 데이터를 가져오려면 반응 쿼리에서 후크를 가져와야 한다. 
 4) 사용법은 RQSuperHeores.page.tsx 파일에 정의되어 있음. 
 5) 그냥 에로우 펑션을 2번째 파라미터 값으로 넣어도 되고 아니면 fetch 인자를 따로 정의해서 넣어도 되는 데 그게 더 깔끔한 거 같다. 
+
+## 3. 
+1) 근데 typescript로 하니깐 error.message를 출력하지를 못했다.(근데 콘솔에는 잘 나온다.) 물론 사용자에게 그대로 보여줄리 없을 테니 그냥 패스 
