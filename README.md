@@ -14,3 +14,8 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 
 ## 3. 
 1) 근데 typescript로 하니깐 error.message를 출력하지를 못했다.(근데 콘솔에는 잘 나온다.) 물론 사용자에게 그대로 보여줄리 없을 테니 그냥 패스 
+
+## 4. 
+1) react-query는 관련된 모든 내부 작업을 시각화하는 데 도움이 되는 devtools를 지원한다. 
+2) 특이한 점은 App.tsx 파일에서 따로 선언해 줘야 하는 거 <ReactQueryDevtools> <- 이 부분 
+3) Devtools 살펴보면 Data Explorer를 많이 살펴볼 듯 

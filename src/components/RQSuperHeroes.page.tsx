@@ -9,7 +9,7 @@ interface DataProps {
 };
 
 const fetchSuperHeroes = () => {
-    return axios.get('http://localhost:4000/super2heros');
+    return axios.get('http://localhost:4000/superheros');
 }
 export const RQSuperHerosPage = () => {
 
