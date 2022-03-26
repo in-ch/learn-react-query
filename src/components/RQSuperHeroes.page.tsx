@@ -13,17 +13,14 @@ const fetchSuperHeroes = () => {
 }
 export const RQSuperHerosPage = () => {
 
-    // const { isLoading, data } = useQuery('super-heroes', () => {
-    //     return axios.get('http://localhost:4000/superheros')
-    // });
-    
+
+    const [refetch, setRefetch] = useState<boolean>(false);    
     const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes,{
-        refetchOnMount: true,
-        refetchOnWindowFocus: true,
+        enabled:refetch
     });
     console.log(isLoading, isFetching);
     
-    if(isLoading){
+    if(isLoading || isFetching){
         return <h2>Loading ..... </h2>
     }
 
@@ -34,6 +31,7 @@ export const RQSuperHerosPage = () => {
     return(
         <>
             <h2>RQSuperHeros Page</h2>
+            <button onClick={()=>setRefetch(!refetch)}>영웅 가져오기</button>
             {
                 data?.data.map((hero:DataProps) => {
                     return <div key={hero.name}>{hero.name}</div>

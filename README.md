@@ -42,4 +42,8 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 2) devTool에서 확인하면 계속 fetching과 stale를 왔다갔다 하는 것을 볼 수 있다. 
 3) 단 윈도우 focus가 안되어 있으면 값을 실행안하는데 refetchIntervalInBackground를 true로 설정하면 포커스가 없을 때도 계속 데이터를 가져온다. 
 
+## 9. useQuery on Click 
+1) 세번째 인자값으로 enable: false를 주면 마운트 시 가져오기가 비활성화 되므로 데이터가 출력되지 않는다. 
+2) 영상에서는 onClick에 그냥 refetch를 넣었는데 이렇게 하면 ts에서는 에러가 나와서 따로 state를 선언해야 했다. 
+
 
