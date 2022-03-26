@@ -12,8 +12,22 @@
         },
         {
             "id":3,
-            "name":"Wonder Woma n",
+            "name":"Wonder Woman",
             "alterEgo":"Princess Diana"
+        }
+    ],
+    "friends": [
+        {
+            "id":1,
+            "name":"민수"
+        },
+        {
+            "id":2,
+            "name":"민재"
+        },
+        {
+            "id":3,
+            "name":"창원"
         }
     ]
 }

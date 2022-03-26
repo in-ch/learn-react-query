@@ -55,4 +55,14 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 1) select 옵션을 통해서 구조화되지 않은 배열을 구조화할 수 있다. 
 2) 따라서 데이터 필터링에 쓸 수 있다. 
 
+## 12. Custom Query Hooks 
+1) Hooks 폴더에 넣고 저장하면 onSuccess, onError랑 바꿔가면서 쓰면 되서 편리하다. 
+
+## 13. Query by Id 
+1) query로 인자값 넘길려면 첫번째 인자를 배열로 하면 된다. 그리고 값넘겨주고 나머지는 axios로 촤라락
+
+## 14. Parallel Queries 
+1) 단일 컴포넌트가 여러 쿼리를 요청할 때 쓰는 것 
+2) useQuery 두번 요청한 후 각각 data 고유 값을 넣어주고 Dynamic Parallel Queries 기능을 통해 2개다 출력해줄 수 있음. 
+
 
