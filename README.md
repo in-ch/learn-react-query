@@ -19,3 +19,8 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 1) react-query는 관련된 모든 내부 작업을 시각화하는 데 도움이 되는 devtools를 지원한다. 
 2) 특이한 점은 App.tsx 파일에서 따로 선언해 줘야 하는 거 <ReactQueryDevtools> <- 이 부분 
 3) Devtools 살펴보면 Data Explorer를 많이 살펴볼 듯 
+
+## 5.
+1) 캐시를 이해하는 것은 매우 중요하다. 
+2) apollo client와 마찬가지로 기본적으로 캐시처리되어 있기 때문에 데이터를 일일히 로딩하지 않는다. (5분 정도 캐싱된다?) -> 지정한 쿼리키로 유니크처리되서 저장된다. 
+3) 캐시타임은 기본적으로 5분인데 3번째 인자에 cacheTime으로 캐시 저장 시간을 설정할 수 있다. 
