@@ -46,4 +46,9 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 1) 세번째 인자값으로 enable: false를 주면 마운트 시 가져오기가 비활성화 되므로 데이터가 출력되지 않는다. 
 2) 영상에서는 onClick에 그냥 refetch를 넣었는데 이렇게 하면 ts에서는 에러가 나와서 따로 state를 선언해야 했다. 
 
+## 10. Success and Error Callbacks 
+1) onSuccess랑 onError로 하면 됨. 
+2) apollo client에서는 onCompleted 였음. 
+3) 쿼리는 오류 발생 시 콜백을 호출하기 전에 세번까지 재시도를 함. 
+
 

@@ -9,14 +9,19 @@ interface DataProps {
 };
 
 const fetchSuperHeroes = () => {
-    return axios.get('http://localhost:4000/superheros');
+    return axios.get('http://localhost:4000/superhero1s');
 }
 export const RQSuperHerosPage = () => {
 
-
     const [refetch, setRefetch] = useState<boolean>(false);    
     const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes,{
-        enabled:refetch
+        enabled:refetch,
+        onSuccess:d=>{
+            console.log(JSON.stringify(d.data));
+        },
+        onError:e=>{
+            console.log(JSON.stringify(e));
+        }
     });
     console.log(isLoading, isFetching);
     
