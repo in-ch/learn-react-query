@@ -24,3 +24,11 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 1) 캐시를 이해하는 것은 매우 중요하다. 
 2) apollo client와 마찬가지로 기본적으로 캐시처리되어 있기 때문에 데이터를 일일히 로딩하지 않는다. (5분 정도 캐싱된다?) -> 지정한 쿼리키로 유니크처리되서 저장된다. 
 3) 캐시타임은 기본적으로 5분인데 3번째 인자에 cacheTime으로 캐시 저장 시간을 설정할 수 있다. 
+4) cacheTime이 지나면 카비지 콜렉터로 수집된다. 
+
+## 6. 
+1) 3번째 인자값으로 staleTime 값을 주면 fresh -> stale 상태로 변경되는데 걸리는 시간 
+2) fresh 상태일때는 쿼리 인스턴스가 새롭게 mount 되어도 네트워크 fetch가 일어나지 않는다. 
+3) 데이터가 한번 fetch 되고 나서 staleTime이 지나지 않았다면 unmount 후 mount되어도 fetch가 일어나지 않는다. 
+4) 확실히 db값을 바꿔도 staleTime값을 많이주면 바로바로 업데이트되지 않는다. 
+

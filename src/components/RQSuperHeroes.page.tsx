@@ -18,7 +18,7 @@ export const RQSuperHerosPage = () => {
     // });
     
     const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes,{
-        cacheTime: 5000,
+        // staleTime:50000
     });
     console.log(isLoading, isFetching);
     
