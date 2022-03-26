@@ -37,3 +37,9 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 2) refetchOnMount: 기본값은 true, 데이터가 stale 상태일 경우 마운트 시 마다 refetch를 실행하는 옵션, "always"로 설정하면 마운트 시 마다 매번 refetch를 실행한다. 
 3) refetchOnWindowFocus : 기본값은 true, -> 윈도우 창이 focus될때면 refetch된다. 
 
+## 8. Polling 
+1) refetchInterval 옵션을 이용하면 지정한 시간마다 자동으로 쿼리를 가져온다. 
+2) devTool에서 확인하면 계속 fetching과 stale를 왔다갔다 하는 것을 볼 수 있다. 
+3) 단 윈도우 focus가 안되어 있으면 값을 실행안하는데 refetchIntervalInBackground를 true로 설정하면 포커스가 없을 때도 계속 데이터를 가져온다. 
+
+
