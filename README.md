@@ -20,15 +20,20 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 2) 특이한 점은 App.tsx 파일에서 따로 선언해 줘야 하는 거 <ReactQueryDevtools> <- 이 부분 
 3) Devtools 살펴보면 Data Explorer를 많이 살펴볼 듯 
 
-## 5.
+## 5. Query Cache
 1) 캐시를 이해하는 것은 매우 중요하다. 
 2) apollo client와 마찬가지로 기본적으로 캐시처리되어 있기 때문에 데이터를 일일히 로딩하지 않는다. (5분 정도 캐싱된다?) -> 지정한 쿼리키로 유니크처리되서 저장된다. 
 3) 캐시타임은 기본적으로 5분인데 3번째 인자에 cacheTime으로 캐시 저장 시간을 설정할 수 있다. 
 4) cacheTime이 지나면 카비지 콜렉터로 수집된다. 
 
-## 6. 
+## 6. Stale Time
 1) 3번째 인자값으로 staleTime 값을 주면 fresh -> stale 상태로 변경되는데 걸리는 시간 
 2) fresh 상태일때는 쿼리 인스턴스가 새롭게 mount 되어도 네트워크 fetch가 일어나지 않는다. 
 3) 데이터가 한번 fetch 되고 나서 staleTime이 지나지 않았다면 unmount 후 mount되어도 fetch가 일어나지 않는다. 
-4) 확실히 db값을 바꿔도 staleTime값을 많이주면 바로바로 업데이트되지 않는다. 
+4) 확실히 db값을 바꿔도 staleTime값을 많이주면 바로바로 업데이트되지 않는다. (stale time의 기본값은 0이다.)
+
+## 7. Refetch Defaults
+1) useQuery는 cacheTime, staleTime과 더불어 2개의 기본값이 더 제공된다.
+2) refetchOnMount: 기본값은 true, 데이터가 stale 상태일 경우 마운트 시 마다 refetch를 실행하는 옵션, "always"로 설정하면 마운트 시 마다 매번 refetch를 실행한다. 
+3) refetchOnWindowFocus : 기본값은 true, -> 윈도우 창이 focus될때면 refetch된다. 
 
