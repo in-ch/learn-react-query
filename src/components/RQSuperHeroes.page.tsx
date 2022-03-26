@@ -9,7 +9,7 @@ interface DataProps {
 };
 
 const fetchSuperHeroes = () => {
-    return axios.get('http://localhost:4000/superhero1s');
+    return axios.get('http://localhost:4000/superheros');
 }
 export const RQSuperHerosPage = () => {
 
@@ -17,10 +17,15 @@ export const RQSuperHerosPage = () => {
     const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes,{
         enabled:refetch,
         onSuccess:d=>{
-            console.log(JSON.stringify(d.data));
+            console.log(JSON.stringify(d));
         },
         onError:e=>{
             console.log(JSON.stringify(e));
+        },
+        select: (data:any)=>{
+            const superHero = data.data.map((hero:any)=>hero.name);
+            console.log(superHero);
+            return superHero;
         }
     });
     console.log(isLoading, isFetching);
@@ -38,8 +43,11 @@ export const RQSuperHerosPage = () => {
             <h2>RQSuperHeros Page</h2>
             <button onClick={()=>setRefetch(!refetch)}>영웅 가져오기</button>
             {
-                data?.data.map((hero:DataProps) => {
-                    return <div key={hero.name}>{hero.name}</div>
+                // data?.data.map((hero:DataProps) => {
+                //     return <div key={hero.name}>{hero.name}</div>
+                // })
+                data?.map((heroName:any) => {
+                    return <div key={heroName}>{heroName}</div>
                 })
             }
         </>

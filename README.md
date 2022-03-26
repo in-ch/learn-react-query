@@ -51,4 +51,8 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 2) apollo client에서는 onCompleted 였음. 
 3) 쿼리는 오류 발생 시 콜백을 호출하기 전에 세번까지 재시도를 함. 
 
+## 11. Data Transformation 
+1) select 옵션을 통해서 구조화되지 않은 배열을 구조화할 수 있다. 
+2) 따라서 데이터 필터링에 쓸 수 있다. 
+
 
