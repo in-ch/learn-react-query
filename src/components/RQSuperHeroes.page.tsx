@@ -21,9 +21,9 @@ export const RQSuperHerosPage = () => {
     const handleAddHeroClick = async () =>{
         console.log({name,alterEgo});
         await addHero({name,alterEgo});
-        setTimeout(()=>{
-            refetch();
-        },1000);
+        // setTimeout(()=>{
+        //     refetch();
+        // },1000);
     };
 
 

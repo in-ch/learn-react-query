@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from 'react-query';
+import { QueryClient, useMutation, useQuery, useQueryClient } from 'react-query';
 import axios from 'axios';
 
 
@@ -30,5 +30,18 @@ export const useSuperHerosData = (onSuccess:FunctionProps,onError:FunctionProps)
 };
 
 export const useAddSuperHeroData = () => {
-    return useMutation(addSuperHero);
+    const queryClint = useQueryClient();
+    return useMutation(addSuperHero,{
+        // onSuccess: () => {
+        //     queryClint.invalidateQueries('super-heroes');  //  Query Invalidation
+        // }
+        onSuccess:(data)=>{
+            queryClint.setQueryData('super-heroes',(oldQueryData:any)=>{
+                return {
+                    ...oldQueryData,
+                    data:[...oldQueryData.data, data.data]
+                }
+            });
+        }
+    });
 };

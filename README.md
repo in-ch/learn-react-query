@@ -83,4 +83,11 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 
 ## 19. Mutations 
 1) useMutation 을 쓰면 되는 데 신기한 점은 useMutation을 정의할 때 넘어 가는 값들을 굳이 명시해줄 필요가 없음. 
-2) refetch 쓰면 query 다시 가져옴. 
+2) refetch 쓰면 query 다시 가져옴.
+
+## 20. Query Invalidation 
+1) mutation에서 onSuccess 부분에 queryClint.invalidateQueries()를 넣으면 굳이 refetch할 필요없이 자동으로 값을 넣어준다.
+2) 단 이 방법은 네트워크에 새로운 데이터를 요청해야 하므로 서버에 과부화를 초래할 수 있다. 
+## 21. 
+1) 위의 방법의 단점을 극복하기 위해 cache를 건들 수도 있다. 
+2) queryClint.setQueryData()를 사용하면 된다.
