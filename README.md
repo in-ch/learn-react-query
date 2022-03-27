@@ -80,3 +80,7 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 
 ## 18. Infinite Queries 
 1) 일단 useQuery대신에 useInfiniteQuery를 써야하는데 코드가 복잡해 지니 예시 코드 보면서 추후 참고하여 작성하면 될 듯 
+
+## 19. Mutations 
+1) useMutation 을 쓰면 되는 데 신기한 점은 useMutation을 정의할 때 넘어 가는 값들을 굳이 명시해줄 필요가 없음. 
+2) refetch 쓰면 query 다시 가져옴. 
