@@ -73,4 +73,7 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 2) enabled를 이용해서 !!channelId 이런식으로 넣어서 종속성있는 데이터를 가져올 수 있음. 
 
 
-
+## 17. Paginated Queries 
+1) pagination 강의는 json server 관련된 내용이여서 걍 axios에 적절한 값만 넣어줘서 요청하면 될듯 
+2) 그리고 새로운 요청을 하면 그전 데이터가 사라지는데 여기서 keepPreviousData : true로 설정하면 마지막 data값을 유지하므로 화면의 목록이 사라지는 깜빡임 현상을 방지할 수 있다. 
+3) 따라서 파지네이션할 때 필수로 true로 해줘야 한다. 
