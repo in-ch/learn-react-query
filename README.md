@@ -88,6 +88,13 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 ## 20. Query Invalidation 
 1) mutation에서 onSuccess 부분에 queryClint.invalidateQueries()를 넣으면 굳이 refetch할 필요없이 자동으로 값을 넣어준다.
 2) 단 이 방법은 네트워크에 새로운 데이터를 요청해야 하므로 서버에 과부화를 초래할 수 있다. 
-## 21. 
+## 21. Handling Mutation Response
 1) 위의 방법의 단점을 극복하기 위해 cache를 건들 수도 있다. 
 2) queryClint.setQueryData()를 사용하면 된다.
+
+## 22. Optimatic Update
+1) 낙관적인 업데이트란 서버 업데이트 시 UI에서도 어차피 업데이트 할 것이란 가정으로 미리 UI를 업데이트 시켜주고 서버를 통해 검증을 받아 업데이트 or 롤백하는 방식 
+2) 그래서 위의 방법보다 빠르다. 
+
+## 23. Axios Interceptor 
+1) axios util를 밖으로 빼니깐 확실히 보기 편하고 추후 dev server와 prod server 바꿀 때 한번만 바꾸면 되니 매우 유용하다. 
