@@ -63,6 +63,14 @@ link : https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo
 
 ## 14. Parallel Queries 
 1) 단일 컴포넌트가 여러 쿼리를 요청할 때 쓰는 것 
-2) useQuery 두번 요청한 후 각각 data 고유 값을 넣어주고 Dynamic Parallel Queries 기능을 통해 2개다 출력해줄 수 있음. 
+2) useQuery 두번 요청한 후 각각 data 고유 값을 넣어주고 2개 다 출력해줄 수 있음. 
+
+## 15. Dynamic Parallel Queries 
+1) useQuries를 사용해서 쿼리를 두번 호출할 수 있음.
+
+## 16. Dependent Queries 
+1) 종속 쿼리를 처리할 때 사용됨. 
+2) enabled를 이용해서 !!channelId 이런식으로 넣어서 종속성있는 데이터를 가져올 수 있음. 
+
 
 

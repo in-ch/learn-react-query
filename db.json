@@ -29,5 +29,17 @@
             "id":3,
             "name":"창원"
         }
+    ],
+    "users":[
+        {
+            "id":"vvv@example.com",
+            "channelId":"inch"
+        }
+    ],
+    "channels":[
+        {
+            "id":"inchsworld",
+            "courses":["react","vue","angular"]
+        }
     ]
 }
